@@ -1,0 +1,77 @@
+:root {
+    --linkCol: #0000ff;
+    --linkHoverCol: #3c3cff;
+    
+    --mainHeadCol: darkslategray;
+    --subHeadCol: slategray;
+    --headContentsCol: #484b4e;
+}
+
+body {
+    background-color: #000000;
+    background-image: linear-gradient(to bottom right, #0a0a0a, #150f0f);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    
+    font-size: 12pt;
+}
+
+/* LINKS */
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    color: var(--linkHoverCol);
+    font-size: 1.1em;
+    text-decoration: none;
+}
+a:active {
+    text-decoration: none;
+}
+a {
+    color: var(--linkHoverCol);
+}
+
+ul {
+    margin-top: 0.3em;
+    list-style-type: circle;
+}
+
+#myName {
+    font-size: 3em;
+    text-align: center;
+    width: 100%;
+    /*background-color: #151515;*/
+    /*background-image: linear-gradient(to bottom right, #0a0a0a, #140f0f);*/
+    color: white;
+}
+
+.resumeSection {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.mainHeader {
+    font-size: 3em;
+    text-decoration: underline;
+    margin-bottom: 0.2em;
+    color: var(--mainHeadCol);
+}
+
+.subHeader {
+    font-size: 1.7em;
+    margin-left: 1.5em;
+    margin-bottom: 0.1em;
+    color: var(--subHeadCol);
+}
+
+.headerContents {
+    font-size: 1.3em;
+    margin-left: 3.5em;
+    color: var(--headContentsCol);
+}
