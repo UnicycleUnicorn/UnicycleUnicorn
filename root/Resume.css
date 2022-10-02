@@ -1,21 +1,13 @@
-:root {
-    --linkCol: white;
-    --linkHoverCol: #4343c4;
-    
-    --mainHeadCol: darkslategray;
-    --subHeadCol: slategray;
-    --headContentsCol: #484b4e;
-}
-
 body {
-    background-color: #000000;
-    background-image: linear-gradient(to bottom right, #0a0a0a, #2e1f1f);
+    background-color: #151010;
+    background-image: linear-gradient(to bottom right, #101010, #1b1313);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
     
     font-size: 12pt;
+    padding: 15px;
 }
 
 .floatRight {
@@ -27,12 +19,26 @@ body {
 }
 
 /* Image icons - mainly used for hyperlink icons */
+img.smallIcon {
+    margin: auto;
+    margin-left: 0.5em;
+    width: 16pt;
+    filter: brightness(0%) invert(100%) ;
+    transition: all 0.5s ease;
+}
+
+img.smallIcon:hover {
+    filter: none;
+    transition: 0.5s ease;
+}
+
 img.icon {
     margin: 3pt 7pt 3pt 7pt;
     width: 25pt;
     filter: brightness(0%) invert(100%) ;
     transition: all 0.5s ease;
 }
+
 img.icon:hover {
     filter: none;
     transition: 0.5s ease;
@@ -40,20 +46,23 @@ img.icon:hover {
 
 /* Style the button that is used to open and close the collapsible content */
 .collapsible {
-    background-color: #eee;
-    color: #444;
+    color: white;
     cursor: pointer;
     padding: 18px;
-    width: 80%;
+    width: 25%;
     border: none;
     text-align: left;
     outline: none;
-    font-size: 15px;
+    font-size: 1.3em;
+    margin-top: 1.5em;
+    background-color: transparent;
+    border-radius: 30px;
+    display: block;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .collapsible:hover {
-    background-color: #ccc;
+    background-color: rgba(10, 10, 10, 0.21);
 }
 
 /* Style the collapsible content. Note: hidden by default */
@@ -64,11 +73,11 @@ img.icon:hover {
 
     font-size: 1.3em;
     margin-left: 2em;
-    color: var(--headContentsCol);
+    color: slategray;
 }
 
 .collapsible:after {
-    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    content: '\02795';
     font-size: 13px;
     color: white;
     float: right;
@@ -76,25 +85,7 @@ img.icon:hover {
 }
 
 .active:after {
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
-}
-
-/* LINKS */
-a:link {
-    text-decoration: none;
-}
-a:visited {
-    text-decoration: none;
-}
-a:hover {
-    color: var(--linkHoverCol);
-    text-decoration: none;
-}
-a:active {
-    text-decoration: none;
-}
-a {
-    color: var(--linkCol);
+    content: "\2796";
 }
 
 ul {
@@ -102,29 +93,39 @@ ul {
     list-style-type: square;
 }
 
+#mainHead {
+    width: 100%;
+    height: 100px;
+}
+
 #leftHead {
     color: white;
     font-size: 2em;
     text-align: left;
     float: left;
-    height: 100px;
+    height: inherit;
 }
 
-#rightHead a {
+#rightHead a, #rightHead span {
     display: block;
     margin: 4px;
+    color: white;
+}
+
+#rightHead a:hover {
+    color: blue;
 }
 
 #rightHead {
     font-size: 1.2em;
     text-align: right;
     float: right;
-    height: 100px;
+    height: inherit;
 }
 
 .subHeader {
-    font-size: 1.7em;
-    margin-left: 1.5em;
     margin-bottom: 0.1em;
-    color: var(--subHeadCol);
+    color: rgb(191, 196, 203);
+    font-size: 1.4em;
+    display: block;
 }
