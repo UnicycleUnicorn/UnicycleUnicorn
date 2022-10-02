@@ -1,6 +1,6 @@
 :root {
-    --linkCol: #0000ff;
-    --linkHoverCol: #3c3cff;
+    --linkCol: white;
+    --linkHoverCol: #4343c4;
     
     --mainHeadCol: darkslategray;
     --subHeadCol: slategray;
@@ -9,13 +9,74 @@
 
 body {
     background-color: #000000;
-    background-image: linear-gradient(to bottom right, #0a0a0a, #150f0f);
+    background-image: linear-gradient(to bottom right, #0a0a0a, #2e1f1f);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
     
     font-size: 12pt;
+}
+
+.floatRight {
+    float: right;
+}
+
+.floatLeft {
+    float: left;
+}
+
+/* Image icons - mainly used for hyperlink icons */
+img.icon {
+    margin: 3pt 7pt 3pt 7pt;
+    width: 25pt;
+    filter: brightness(0%) invert(100%) ;
+    transition: all 0.5s ease;
+}
+img.icon:hover {
+    filter: none;
+    transition: 0.5s ease;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 80%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+    background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+
+    font-size: 1.3em;
+    margin-left: 2em;
+    color: var(--headContentsCol);
+}
+
+.collapsible:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
 /* LINKS */
@@ -27,40 +88,38 @@ a:visited {
 }
 a:hover {
     color: var(--linkHoverCol);
-    font-size: 1.1em;
     text-decoration: none;
 }
 a:active {
     text-decoration: none;
 }
 a {
-    color: var(--linkHoverCol);
+    color: var(--linkCol);
 }
 
 ul {
     margin-top: 0.3em;
-    list-style-type: circle;
+    list-style-type: square;
 }
 
-#myName {
-    font-size: 3em;
-    text-align: center;
-    width: 100%;
-    /*background-color: #151515;*/
-    /*background-image: linear-gradient(to bottom right, #0a0a0a, #140f0f);*/
+#leftHead {
     color: white;
+    font-size: 2em;
+    text-align: left;
+    float: left;
+    height: 100px;
 }
 
-.resumeSection {
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
+#rightHead a {
+    display: block;
+    margin: 4px;
 }
 
-.mainHeader {
-    font-size: 3em;
-    text-decoration: underline;
-    margin-bottom: 0.2em;
-    color: var(--mainHeadCol);
+#rightHead {
+    font-size: 1.2em;
+    text-align: right;
+    float: right;
+    height: 100px;
 }
 
 .subHeader {
@@ -68,10 +127,4 @@ ul {
     margin-left: 1.5em;
     margin-bottom: 0.1em;
     color: var(--subHeadCol);
-}
-
-.headerContents {
-    font-size: 1.3em;
-    margin-left: 3.5em;
-    color: var(--headContentsCol);
 }
