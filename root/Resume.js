@@ -1,4 +1,4 @@
-function changeDark() {
+function changeToLight() {
     var style = document.documentElement.style;
     style.setProperty('--background_color','#fbfbfb');
     style.setProperty('--background_image','linear-gradient(to bottom right, #ffffff, #f1f1f1)');
@@ -16,11 +16,11 @@ function changeDark() {
 
     var darkModeImage = document.getElementsByName("dark_light_mode_image")[0];
     darkModeImage.setAttribute('title','Dark Mode');
-    darkModeImage.setAttribute('onClick','changeLight()');
+    darkModeImage.setAttribute('onClick','changeToDark()');
     darkModeImage.setAttribute('src','root/Moon_icon.png');
 }
 
-function changeLight() {
+function changeToDark() {
     var style = document.documentElement.style;
     style.setProperty('--background_color','#151010');
     style.setProperty('--background_image','linear-gradient(to bottom right, #101010, #1b1313)');
@@ -38,7 +38,7 @@ function changeLight() {
 
     var darkModeImage = document.getElementsByName("dark_light_mode_image")[0];
     darkModeImage.setAttribute('title','Light Mode');
-    darkModeImage.setAttribute('onClick','changeDark()');
+    darkModeImage.setAttribute('onClick','changeToLight()');
     darkModeImage.setAttribute('src','root/Sun_icon.png');
 }
 
