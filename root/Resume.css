@@ -1,24 +1,40 @@
+:root {
+    --background_color: #151010;
+    --background_image: linear-gradient(to bottom right, #101010, #1b1313);
+
+    --header_text_color: white;
+    --sub_header_text_color: rgb(191, 196, 203);
+    --content_text_color: slategray;
+
+    --url_highlight_color: blue;
+    
+    --accent_color: darkslateblue;
+    --sub_accent_color: rgb(48, 42, 87);
+
+    --icon_color_filter: brightness(0%) invert(100%);
+}
+
 ::-webkit-scrollbar {
     width: 1.2vw;
     height: 3vh;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: rgb(48, 42, 87);
+    background-color: var(--sub_accent_color);
 }
 
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background-color: slategray;
+    background-color: var(--content_text_color);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: rgb(191, 196, 203);
+    background-color: var(--sub_header_text_color);
 }
 
 body {
-    background-color: #151010;
-    /*background-image: linear-gradient(to bottom right, #101010, #1b1313);*/
+    background-color: var(--background_color);
+    background-image: var(--background_image);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -42,7 +58,7 @@ img.smallIcon {
     margin: auto;
     margin-left: 0.5em;
     width: 16pt;
-    filter: brightness(0%) invert(100%) ;
+    filter: var(--icon_color_filter);
     transition: all 0.5s ease;
 }
 
@@ -54,7 +70,7 @@ img.smallIcon:hover {
 img.icon {
     margin: 3pt 7pt 3pt 7pt;
     width: 25pt;
-    filter: brightness(0%) invert(100%) ;
+    filter: var(--icon_color_filter);
     transition: all 0.5s ease;
 }
 
@@ -69,9 +85,21 @@ img.icon:hover {
     padding-bottom: 3%;
 }
 
+.collapsible:after {
+    color: var(--sub_header_text_color);
+    content: '\2795\fe0e';
+    font-size: 0.8em;
+    float: right;
+}
+
+.active:after {
+    color: var(--sub_header_text_color);
+    content: '\2796\fe0e';
+}
+
 /* Style the button that is used to open and close the collapsible content */
 .collapsible {
-    color: white;
+    color: var(--header_text_color);
     cursor: pointer;
     padding: 18px;
     width: 15em;
@@ -80,16 +108,18 @@ img.icon:hover {
     outline: none;
     font-size: 1.3em;
     margin-top: 1.5em;
-    background-color: darkslateblue;
+    background-color: var(--accent_color);
     border-radius: 30px;
     display: block;
 }
 
-
+.content span {
+    display: block;
+}
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .collapsible:hover {
-    background-color: rgb(48, 42, 87);
+    background-color: var(--sub_accent_color);
 }
 
 /* Style the collapsible content. Note: hidden by default */
@@ -101,18 +131,7 @@ img.icon:hover {
 
     font-size: 1.3em;
     margin-left: 2em;
-    color: slategray;
-}
-
-.collapsible:after {
-    content: '\02795';
-    font-size: 13px;
-    float: right;
-    margin-left: 5px;
-}
-
-.active:after {
-    content: "\2796";
+    color: var(--content_text_color);
 }
 
 ul {
@@ -123,11 +142,11 @@ ul {
 #mainHead {
     width: 100%;
     height: 110px;
-    background-color: darkslateblue;
+    background-color: var(--accent_color);
 }
 
 #leftHead {
-    color: white;
+    color: var(--header_text_color);
     font-size: 2em;
     text-align: left;
     float: left;
@@ -138,11 +157,11 @@ ul {
 #rightHead a, #rightHead span {
     display: block;
     margin: 4px;
-    color: white;
+    color: var(--header_text_color);
 }
 
 #rightHead a:hover {
-    color: blue;
+    color: var(--url_highlight_color);
 }
 
 #rightHead {
@@ -155,7 +174,7 @@ ul {
 
 .subHeader {
     margin-bottom: 0.1em;
-    color: rgb(191, 196, 203);
+    color: var(--sub_header_text_color);
     font-size: 1.4em;
     display: block;
 }
