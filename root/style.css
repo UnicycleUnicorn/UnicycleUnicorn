@@ -28,9 +28,9 @@
     
     /* Main */
     --mainFont: "Georgia";
-    --mainTopGap: 30px;
-    --mainSideGap: 30px;
-    --mainBottomGap: 30px;
+    --mainTopGap: 20px;
+    --mainSideGap: 10px;
+    --mainBottomGap: 15px;
     
     /* Footer */
     --footerFont: "Courier New";
