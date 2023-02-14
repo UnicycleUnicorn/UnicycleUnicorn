@@ -1,0 +1,327 @@
+/* Master Controls */
+:root {
+    /* Background */
+    --backgroundBottomRight: #101010;
+    --backgroundTopLeft: #1b1313;
+    --backgroundColor: #151010;
+    --backgroundImage: linear-gradient(to bottom right, var(--backgroundTopLeft), var(--backgroundBottomRight));
+    
+    /* Header */
+    --headerFont: "Impact";
+    --headerBackColor: #000000;
+    --profPicHeight: 60px;
+    --nameFontSize: 33pt;
+    --nameTextColor: #ffffff;
+    --headerVertPadding: 8px;
+    --headerHorPadding: 12px;
+    
+    /* Navigation */
+    --hamburgerFontSize: 30pt;
+    --hamburgerTextColor: #ffffff;
+    --hamburgerHoverTextColor: #808080;
+    --optionFontSize: 14pt;
+    --optionTextColor: #ffffff;
+    --optionHoverTextColor: #000000;
+    --optionBackColor: #000000;
+    --optionHoverBackColor: #808080;
+    --optionRadius: 10px;
+    
+    /* Main */
+    --mainFont: "Georgia";
+    --mainTopGap: 30px;
+    --mainSideGap: 30px;
+    --mainBottomGap: 30px;
+    
+    /* Footer */
+    --footerFont: "Courier New";
+    --footerColor: #000000;
+    --footerFontSize: 12pt;
+    --footerTextColor: #ffffff;
+    --footerTextHoverColor: #0000ff;
+    --footerVertPadding: 45px;
+    --footerHorPadding: 30px;
+    --footerVertMargin: 10px;
+}
+
+/* Body / Html */
+body, html {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: var(--backgroundColor);
+    background-image: var(--backgroundImage);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+/* Header */
+header#page-header {
+    background-color: var(--headerBackColor);
+    padding: var(--headerVertPadding) var(--headerHorPadding);
+    font-family: var(--headerFont);
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: -10px;
+}
+header span {
+    color: var(--nameTextColor);
+    font-size: var(--nameFontSize);
+}
+header img {
+    height: var(--profPicHeight);
+}
+
+
+/* Navigation */
+input[type='checkbox'].navigation-checkbox {
+    color: var(--hamburgerTextColor);
+    font-size: var(--hamburgerFontSize);
+}
+.navigation-display, .navigation-hover {
+    color: var(--hamburgerTextColor);
+    font-size: var(--hamburgerFontSize);
+}
+input[type='checkbox'].navigation-checkbox:hover + label.navigation-display, 
+input[type='checkbox'].navigation-checkbox:checked + label.navigation-display {
+    color: var(--hamburgerHoverTextColor);
+}
+.navigation-container {
+    border-radius: var(--optionRadius);
+    background-color: var(--optionBackColor);
+}
+.navigation-content {
+    color: var(--optionTextColor);
+    border-radius: var(--optionRadius);
+    font-size: var(--optionFontSize);
+}
+.navigation-content:hover {
+    background-color: var(--optionHoverBackColor);
+    color: var(--optionHoverTextColor);
+}
+
+
+/* Main / Primary Sections */
+main {
+    flex: 1;
+    margin: var(--mainTopGap) var(--mainSideGap) var(--mainBottomGap) var(--mainSideGap);
+    color: white;
+    font-family: var(--mainFont);
+    font-size: 14pt;
+    display: flex;
+}
+section {
+    flex: 1;
+}
+section h1 {
+    margin: 0;
+    text-align: left;
+    text-decoration: underline;
+    display: inline-block;
+}
+section p {
+    text-indent: 20pt;
+    margin: 15px 0px;
+}
+section p.noGap {
+    margin-top: -10px;
+}
+
+.floatRightImage {
+    float: right;
+    margin: 10px;
+}
+.floatLeftImage {
+    float: left;
+    margin: 10px;
+}
+
+/* Home */
+#Home {
+    
+    padding: 15px;
+}
+#Home img {
+    height: 280px;
+}
+
+
+/* Education */
+#Education {
+    border: 6px solid green;
+    padding: 15px;
+}
+
+
+/* Experience */
+#Experience {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+#Experience > div {
+    flex: 1;
+    margin: 20px;
+    min-width: 350px;
+    
+    border: 1px solid green;
+}
+#Experience > div p {
+    text-align: left;
+}
+#Experience > div > h3 {
+    margin-bottom 10px;
+}
+
+
+/* Projects */
+#Projects {
+    --projectCaretColor: #33475D;
+    --projectCaretClickColor: #7D86B0;
+    --projectCaretHoverColor: #496585;
+    
+    --projectSelectorColor: #415A77;
+    --projectSelectorHoverColor: #6C76A5;
+    --projectSelectoClickColor: #aaafcb;
+    --projectSelectorSelectedColor: #8E95BA;
+}
+#Projects div#projectScroll {
+    margin: 0px;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#Projects div#projectScroll input.projSelector {
+    margin: 3px 10px;
+    font-size: 1em;
+    appearance: none;
+    color: var(--projectSelectorColor);
+    font-size: 0.9em;
+    cursor: pointer;
+}
+#Projects div#projectScroll input.projSelector:hover {
+    color: var(--projectSelectorHoverColor);
+}
+#Projects div#projectScroll input.projSelector:checked {
+    color: var(--projectSelectorSelectedColor);
+    font-size: 80%;
+}
+#Projects div#projectScroll input.projSelector:active {
+    color: var(--projectSelectoClickColor);
+}
+#Projects div#projectScroll i.projCaret {
+    margin: 3px 10px;
+    font-size: 2.2em;
+    color: var(--projectCaretColor);
+    cursor: pointer;
+}
+#Projects div#projectScroll i.projCaret:hover {
+    color: var(--projectCaretHoverColor);
+}
+#Projects div#projectScroll i.projCaret:active {
+    color: var(--projectCaretClickColor);
+}
+#Projects div.project {
+    width: 100%;
+    text-align: center;
+}
+#Projects div.project h2 {
+    margin: 30px 10px;
+}
+/*
+#Projects div.project p:before {
+    content: "";
+    width: 12em;
+    display: block;
+    overflow: hidden;
+    border: 1px solid green;
+}*/
+#Projects div.project p {
+    text-align: left;
+    text-indent: 20pt;
+}
+#Projects .bold {
+    font-weight: bold;
+}
+#Projects div.project p.move-left {
+    margin-left: 35px;
+}
+#Projects #honorable-mentions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+#Projects #honorable-mentions > div {
+    flex: 1;
+    margin: 20px;
+    min-width: 400px;
+}
+#Projects #honorable-mentions > div > h3 {
+    margin-bottom 10px;
+}
+
+
+
+/* GitHub Links */
+ a.github-link {
+    color: white;
+    transition: color 0.1s;
+}
+ a.github-link:hover {
+    color: #9100fd;
+    transition: color 0.5s;
+}
+
+
+/* Custom */
+#Custom {
+    border-width: 10px;
+    border-style: solid;
+    border-image: linear-gradient(to bottom right, red, orange, yellow, green, blue, indigo, violet) 1;
+    padding: 15px;
+    text-align: center;
+}
+ul#colors {
+    margin: 0px;
+    list-style: none;
+    padding: 0px;
+    text-align: left;
+    display: inline-block;
+}
+ul#colors li input {
+    background: none;
+    border: none;
+    height: 40px;
+    width: 40px;
+}
+
+
+/* Footer */
+footer#page-footer {
+    font-family: var(--footerFont);
+    background-color: var(--footerColor);
+    
+}
+footer#page-footer .page-footer-content {
+    font-size: var(--footerFontSize);
+    color: var(--footerTextColor);
+    margin: var(--footerVertMargin) var(--footerHorPadding);
+}
+footer#page-footer .page-footer-content i::after {
+    content: "\2002";
+}
+footer#page-footer .page-footer-content:hover {
+    color: var(--footerTextHoverColor);
+}

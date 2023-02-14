@@ -1,134 +1,169 @@
-<!DOCTYPE html>
-
-<html>
+<!doctype html>
+<html lang="en">
     <head>
-		<title>Fleming, Braden</title>
-        <link rel="icon" type="image/x-icon" href="root/favicon.ico">
-		<link type="text/css" rel="stylesheet" href="root/Resume.css">
-	</head>
-	<body>
-
-        <!-- Header -->
-        <div id="mainHead">
-            <div id="leftHead">
-                Braden Fleming
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Braden Fleming</title>
+        <link rel="stylesheet" href="https://unicycleunicorn.github.io/frontend-unicycle/primary.css">
+        <link rel="stylesheet" href="root/style.css">
+        <link rel="icon" type="image/x-icon" href="root/images/Me.jpg">
+    </head>
+    <body>
+        <!-- Header - contains links to each section -->
+        <header id="page-header">
+            <span class="page-header-content">
+                <input class="fa-solid fa-bars navigation-checkbox" type="checkbox" id="navigation">
+                <label for="navigation" class="fa-solid fa-bars navigation-display">
+                    <span class="navigation-container">
+                        <span class="navigation-content" onclick="swapSection('Home')">Home</span>
+                        <span class="navigation-content" onclick="swapSection('Education')">Education</span>
+                        <span class="navigation-content" onclick="swapSection('Experience')">Experience</span>
+                        <span class="navigation-content" onclick="swapSection('Projects')">Projects</span>
+                        <span class="navigation-content" onclick="swapSection('Custom')">Customize</span>
+                    </span>
+                </label>
+            </span>
+            
+            <span class="page-header-content">Braden Fleming</span>
+            <img src="root/images/Me.jpg" class="round-image page-header-content" alt="Profile Picture" title="Profile picture">
+        </header>
+        
+        <!-- Main - primary element, contains all information to be displayed -->
+        <main>
+            <!-- Home Section -->
+            <section id="Home" class="unhide-transition-1-5s">
+                <h1>About Me</h1>
+                <p>Hello, my name's Braden. I’m an undergraduate computer science student from Finksburg, Maryland.</p>
+                <p>When I’m bored, I like to play video games, mainly Minecraft, eat, unicycle, volunteer, and code unnecessarily complex solutions to non-existent problems. Here's a fun fact: <i>I am a professional unicyclist and recently performed on Last Week Tonight with John Oliver</i>.</p>
+                <img src="root/images/Unicycling.jpg" width="360" class="floatRightImage" alt="My brother and I on the show set" title="My brother and I on the show set">
+                <p>I started my computer science journey a while ago. I began programming on a Ti-84 calculator ambitiously trying to create a small game. I ended up just creating some simple math programs in Ti-Basic. I then joined some friends in creating a FLL (First Lego League) team, where we built &amp; programmed Lego robots which qualified us for the state competition.</p>
+                <p>I continued my journey through Gamemaker scripting by developing small games. I quickly advanced to python where, I continued developing small math programs and mini applications to hone my skills. I then interned at Johns Hopkins University Physics Lab in computer science. I enrolled at York College and completed my first year as a Forensic Chemistry major. During the first year, I spent most of my free time programing, so, I decided to switch to a computer science degree. I now anticipate that I'll be graduating one semester earlier than my original graduation date.</p>
+            </section>
+            
+            <!-- Education Section -->
+            <section id="Education" class="hidden unhide-transition-1-5s">
+                <h1>Education</h1>
+                <img src="root/images/YCP.png" height="180" class="floatRightImage" alt="YCP Logo" title="YCP Logo">
+                <p>Currently, I am working towards obtaining my computer science bachelor’s degree at York College of Pennsylvania while working part time.</p>
+                <p>During my schooling, I have had the pleasure of working on many projects to further advance my learning. Some of these projects include an online game repository with matchmaking, an algorithm to convert images to Minecraft blocks, a large Minecraft mod, and a multi-year radio telescope. That's just what I have done so far!</p>
+                <p class="noGap">In the following semester, I plan to lead the control room development on the radio telescope and contributing towards at least one more large-scale project.</p>
+                <p>Notable classes I have taken so far include: Calculus III, Software Engineering, Networking, Cyber Security, Data Structures, and Algorithms.</p>
+                <p>I am looking to find employment in software development that will allow me to further my education in computer science to obtain a graduate degree however, I am still deciding what discipline to obtain my masters in.</p>
+            </section>
+            
+            <!-- Experience Section -->
+            <section id="Experience" class="hidden unhide-transition-1-5s">
                 <div>
-                    <a href="root/Braden%20Fleming,%20Resume.pdf" title="Download as PDF" download>
-                        <img src="root/Download_icon.png" class="floatLeft icon">
-                    </a>
-                    <img src="root/Sun_icon.png" class="floatLeft icon" name="dark_light_mode_image" title="Light Mode" onClick="changeToLight()">
-                    <a href="https://www.linkedin.com/in/braden-fleming-2b8000234/" title="Connect on LinkedIn" target="_blank">
-                        <img src="root/LinkedIn_icon.png" class="floatRight icon">
-                    </a>
-                    <a href="https://github.com/UnicycleUnicorn" title="Visit my GitHub" target="_blank">
-                        <img src="root/GitHub_icon.png" class="floatRight icon">
-                    </a>
+                    <h3>Student Security Supervisor</h3>
+                    <p>While attending school at York College of Pennsylvania, I am also working part time at the college's police department as a student security supervisor. I frequently work long shifts responding to routine calls such as lockouts, noise complaints, and fire alarms. I also often respond to medical emergencies, severe and non-severe.</p>
+                    <p>My official title is, Student Sergeant; within this role, I am in charge of the training regime for new recruits aswell as training current offiers. Trainings range from MOAB to bike, CPR, and tourniquet. Throughout my time in the Campus Safety deparment, I have gained invaluable skills relating to time management, training, organisation, community relations, and the ability to work under stress.</p>
                 </div>
-            </div>
-
-            <div id="rightHead">
-                <span>Finksburg MD, 21048</span>
-                <a href="tel:6673677079" title="Call Braden Fleming">(667) 367-7079</a>
-                <a href="mailto:bradenfleming0801@gmail.com" title="Email Braden Fleming" target="_blank">bradenfleming0801@gmail.com</a>
-            </div>
-        </div>
-
-        <div id="mainSection">
-            <!-- Education -->
-            <button type="button" class="collapsible">Education</button>
-            <div class="content">
-                <span class="subHeader">York College of Pennsylvania, York, PA</span>
-                <ul>
-                    <li><B>Bachelors of Science: </B>Computer Science</li>
-                    <li><B>Minor: </B>Mathematics</li>
-                    <li><B>GPA: </B>3.50</li>
-                    <li><B>Expected graduation: </B>May 2024</li>
-                </ul>
-            </div>
+                <div>
+                    <h3>Programing Instructor</h3>
+                    <p>During the summer of 2022, I interned remotely at Coding4Youth, teaching the future generation about programming concepts, editors, and programming languages. Over the course of this internship, even though I was the instructor, I learned about the brackets editor, and gained a lot of formal knowledge on HTML, CSS, Python, and Lua. I also gained kowledge on how to help people overcome programming issues and how to explain complex topics.</p>
+                </div>
+                <div>
+                    <h3>Computer Science Intern</h3>
+                    <p>During my high-school senior year, I interned at the Johns Hopkins University Physics Lab. While interning there, I developed a ballistics simulation in MatLab. This simulation, while only accurate for spherical ballistics, took into account many factors, including the Earth's rotation, air density changes, and the Mangus effect.</p>
+                    <p>Over the course of this internship, I learned a great deal about programing, MatLab, physics, and math, but I also learned a lot about basic software development. At the end of this internship, the simulation was presented to a team of high-level industry professionals.</p>
+                </div>
+            </section>
             
-            <!-- Technology Summary -->
-            <button type="button" class="collapsible">Technology Summary</button>
-            <div class="content">
-                <span><B>Programming/Languages: </B>Python, Java, Ti-Basic, MatLab, HTML, & CSS</span>
-                <span><B>Design &amp; IDE Tools: </B>Visual Studio Code, IntelliJ , Eclipse, GitHub, & Brackets</span>
-                <span><B>Systems: </B>Windows & Linux</span>
-                <span><B>Coursework: </B>Software Engineering, Calculus III, Data Structures, & Networking</span>
-            </div>
+            <!-- Project Section -->
+            <section id="Projects" class="hidden unhide-transition-1-5s">
+                
+                <!-- Selection Panel -->
+                <div id="projectScroll">
+                    <i class="projCaret fa-solid fa-caret-left" onclick="projectUp()"></i>
+                    <input type="radio" name="projects" checked class="projSelector fa-solid fa-circle" onchange="projectSelected()">
+                    <input type="radio" name="projects" class="projSelector fa-solid fa-circle" onchange="projectSelected()">
+                    <input type="radio" name="projects" class="projSelector fa-solid fa-circle" onchange="projectSelected()">
+                    <input type="radio" name="projects" class="projSelector fa-solid fa-circle" onchange="projectSelected()">
+                    <input type="radio" name="projects" class="projSelector fa-solid fa-circle" onchange="projectSelected()">
+                    <i class="projCaret fa-solid fa-caret-right" onclick="projectDown()"></i>
+                </div>
+                
+                <!-- Radio Telescope -->
+                <div class="project unhide-transition-1-0s">
+                    <h2>Radio Telescope <a href="https://github.com/YCPRadioTelescope" target="_blank"  title="View on GitHub" class="github-link"><i class="fa-brands fa-github"></i></a></h2>
+                    <p>I have recently been provided the opportunity to work on an extremely interesting and demanding project. The radio telescope is a client driven project at YCP which devoted undergraduates from multiple majors have been developing for the past few years.</p>
+                    <img src="root/images/telescope_front.jpg" height="300" class="floatLeftImage" alt="Font of the Radio Telescope" title="Font of the Radio Telescope">
+                    <p>The section that I spend the majority of my time working on is the control room application. Written in primarily C#, the control room handles all connection with the telescope, providing the ability to rotate, schedule appointments, and run scripts from a GUI. Any movement performed by the telescope must go through the control room first, whether or not the mobile application sent the original command.</p>
+                    <img src="root/images/telescope_back.jpg" height="300" class="floatRightImage" alt="Back of the Radio Telescope" title="Back of the Radio Telescope">
+                    <p>This project has helped me better my understanding of C# and software development. I have had the privilege of working with an intensive, constantly changing, multi-developer code base, interacting with previous developers, communicating between teams, and presenting to clients. Throughout my time so far, I have also learned a lot about the behind the scenes of networking with the device and the hardware associated with the telescope.</p>
+                    <p>I am currently preparing to lead the development of the control room application during the fall 2023 semester, when we will be onboarding a new group of eager students.</p>
+                </div>
+                
+                <!-- Minecraft Mod -->
+                <div class="project hidden unhide-transition-1-0s" >
+                    <h2>Minecraft Mod <a href="https://github.com/ianvivi13/MinecraftMod" target="_blank"  title="View on GitHub" class="github-link"><i class="fa-brands fa-github"></i></a></h2>
+                    <p>BitO'Everything is a Java Minecraft mod currently be developed by me and another student. In this mod, a few simple features have been developed, such as new wood types, blocks, and simple items. There are many advanced features though:</p>
+                    <img src="root/images/Minecraft.png" class="floatRightImage" height="260" alt="Minecraft mod" title="Minecraft mod">
+                    <p class="move-left"><span class="bold">Magic</span> - requires firing an event within an interface, so the children receive the event as well as sending communications between the server and clients through network packets.</p>
+                    <p class="move-left"><span class="bold">Custom Text Formatting</span> - requires an understanding of regex expressions and matching bracket pairs in a string.</p>
+                    <p class="move-left"><span class="bold">Tree generation</span> - requires the use of generating random points within a 3D inequality to find branch locations, generating Bezier curves as branches, and finally placing merging metaballs for foliage.</p>
+                    <p class="move-left"><span class="bold">Boats and potters</span> - requires the development of new renderers.</p>
+                    <p>There are many complex topics to be understood when developing a mod of this scale. Mathematics &amp; statistics are frequently used, as well as advanced randomization, events, registries, object-oriented design, suppliers, threading, reflection, codecs, and JSON.</p>
+                </div>
+                
+                <!-- Card Game Repo -->
+                <div class="project hidden unhide-transition-1-0s">
+                    <h2>Card Game Repo <a href="https://github.com/ianvivi13/GameRepo" target="_blank"  title="View on GitHub" class="github-link"><i class="fa-brands fa-github"></i></a></h2>
+                    <p>For software engineering class, my group and I were required to develop a webpage with a backend server. My group and I decided to develop a card game repository where one could login, and host specific card games: blackjack, Exploding Kittens, Uno, and more. The server was to be programmed in Java with servlets and SQL interactions. The client webpages were built with HTML, CSS, and JavaScript.</p>
+                    <img class="floatRightImage" src="root/images/UNO.jpg" alt="Live online UNO match" width="420" title="Live online UNO match">
+                    <p>This was a bit ambitious and we certainly did not complete our original goal of 5+ playable games with bots and online matchmaking, however we made impressive progress. By the end of the semester, we had developed a server, capable of interacting with SQL to store game data on blackjack, Exploding Kittens, and Uno. The server had game logic completely implemented for 2-person blackjack and 2-6 player Uno with special rules. Unfortunately, Exploding Kittens was not able to be completed.</p>
+                    <p>By the end of the project, a user could login to an account on the server via their browser and host a match of either blackjack or Uno. They would then recieve a lobby code to which they could send to their friends to join the game or host publically for others to happen upon. The game would playout just as it normally would, preventing players from making illegal moves and keeping track of win / loss conditions. At the end of a match, or in the event of a disconnected player, all players would be returned back to the main menu where they could enjoy some music and view their game stats.</p>
+                </div>
+                
+                <!-- Minecraft Block Image Converter -->
+                <div class="project hidden unhide-transition-1-0s">
+                    <h2>Minecraft Block Image Converter</h2>
+                    <img src="root/images/Minecraft_Image_GUI.png" alt="Program GUI" width="400" class="floatLeftImage" title="Program GUI">
+                    <p>Minecraft block image converter is a program that I developed during software engineering. This program has the ability to convert standard images into images built with Minecraft blocks and place them in the world in a 2D or 3D format.</p>
+                    <img src="root/images/Fox-2D.png" alt="Converted fox image" class="floatRightImage" width="300" title="Converted fox image">
+                    <p>By default, a 2D format is used however one can change the program to output an image made for use with Minecraft maps which are generated from a top down approach and individual map pixels are based on the color of the block the map is looking at, and it's elevation compared to it's neighbors.</p>
+                    <p>The program also has the ability to change the size of the outputted image, image filters, such as greyscale, monochrome, inversion, and others. Upon running the program, the user will be prompted to choose a color scaling, typically, the program compares colors using RGB however the user may select to use CIE-L*ab for a more accurate image.</p>
+                    <p>The images displayed here have all been generated by the program. The fox is the output of the selections show in the GUI, RGB was used aswell as the average color of each Minecraft block. The Chameleon is an example of a 3D image. The map must be generated through 3D lines of blocks.</p>
+                    
+                    <img src="root/images/Chameleon-Map-Blocks.png" alt="Converted chameleon mapped blocks" title="Converted chameleon mapped blocks" width="400" class="floatLeftImage">
+                    <img src="root/images/Chameleon-Map-Map.png" alt="Converted chameleon mapped image" width="300" title="Converted chameleon mapped image">
+                    
+                </div>
+                
+                <!-- Honorable Mentions -->
+                <div class="project hidden unhide-transition-1-0s">
+                    <h2>Honorable Mentions</h2>
+                    <div id="honorable-mentions">
+                        <div>
+                            <h3>Personal Website <a href="https://github.com/UnicycleUnicorn/UnicycleUnicorn" target="_blank"  title="View on GitHub" class="github-link"><i class="fa-brands fa-github"></i></a></h3>
+                            <p>This personal website is something I have been considering developing for a while. It had originally begun as a simple resume with JavaScript for drop downs. Now, it has become much more than that.</p>
+                            <p>Over the course of development, I have learned a great deal of HTML, CSS, and JavaScript. Everything is built without the use of 3rd party frameworks (other than font-awesome for icons). This webpage is developed through the use of my own framework, Frontend Unicycle, developed in pure CSS and JavaScript</p>
+                        </div>
+                        <div>
+                            <h3>Frontend Unicycle <a href="https://github.com/UnicycleUnicorn/frontend-unicycle#readme" target="_blank"  title="View on GitHub" class="github-link"><i class="fa-brands fa-github"></i></a></h3>
+                            <p>Frontend Unicycle is a CSS and JavaScript framework that I am currently developing out of the dislike of common frameworks like bootstrap. I began development right after I began work on this webpage and found that bootstrap wasn't the right fit. I felt the need to learn pure CSS, so Frontend Unicycle was born.</p>
+                            <p>At the time of writing this, Frontend Unicycle has features such as headers, footers, hidden elements, and navigation control. The primary goal is to build as much as possible with only CSS for a responsive, mobile-friendly framework. Currently, the project sits in a state where it will be developed as ideas and needs manifest from either colleagues or myself.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
             
-            <!-- Projects -->
-            <button type="button" class="collapsible">Projects</button>
-            <div class="content">
-                <span class="subHeader">Independent Project | Summer 2022 - Present
-                    <a href="https://github.com/ianvivi13/MinecraftMod" title="Minecraft Mod on GitHub" target="_blank">
-                        <img src="root/GitHub_icon.png" class="smallIcon">
-                    </a>
-                </span>
-                <ul>
-                    <li>Devloping a Minecraft mod in Java with a small team</li>
-                    <li>Must learn and analyze others' code</li>
-                    <li>Interfacing with a large, contantly changing project and developing around multiple APIs</li>
-                    <li>Using GitHub to develop alongside others and track issues / features</li>
-                </ul>
-
-                <span class="subHeader">Software Design | Spring 2022
-                    <a href="https://github.com/ianvivi13/GameRepo" title="GameRepo on GitHub" target="_blank">
-                        <img src="root/GitHub_icon.png" class="smallIcon">
-                    </a>
-                </span>
-                <ul>
-                    <li>Designed and implemented a webpage to play blackjack and uno online with other developers</li>
-                    <li>Learned many new skills and advanced knownledge in multiple languages: Java, HTML, CSS, JavaScript, and SQL</li>
-                </ul>
-
-                <span class="subHeader">Software Design | Spring 2022</span>
-                <ul>
-                    <li>Developed an algorithm in Python to convert images into Minecraft Block images</li>
-                    <li>Uses multiple different color theories to create the best possible image</li>
-                </ul>
-
-                <span class="subHeader">Independent Project | Fall 2020</span>
-                <ul>
-                    <li>Designed and created a Python program to play bingo automatically using 20,000+ bingo sheets</li>
-                    <li>Developed a separate program to automatically retrieve bingo sheets from the internet</li>
-                </ul>
-            </div>
-
-            <!-- Work Experience -->
-            <button type="button" class="collapsible">Work Experience</button>
-            <div class="content">
-                <span class="subHeader">Computer Science Instructor | Coding4Youth | Summer 2022 – Present</span>
-                <ul>
-                    <li>Teach ages 7-18 computer science skills and programs</li>
-                    <li>Simplify difficult concepts and tasks</li>
-                    <li>Exposed to many different languages and programs like lua & brackets</li>
-                    <li>Expanded knowledge of other languages such as HTML & CSS</li>
-                </ul>
-
-                <span class="subHeader">Security Supervisor | York College of PA – Department of Campus Safety, York, PA | Summer 2020 – Present</span>
-                <ul>
-                    <li>Respond to medical emergencies, fire alarms, and physical altercations</li>
-                    <li>Perform routine patrols and resolve situations</li>
-                    <li>Oversee and train multiple groups of employees including bike, tourniquet, driving, and online certification</li>
-                </ul>
-
-                <span class="subHeader">Computer Science Intern | Johns Hopkins University. Applied Physics Laboratory | September 2019 - May 2020</span>
-                <ul>
-                    <li>Worked individually to design and program an advanced ballistics simulation in MatLab</li>
-                    <li>Capable of being implemented into a larger simulation</li>
-                    <li>Presented project to a team of senior-level software developers</li>
-                </ul>
-            </div>
-
-            <!-- Extracurriculars -->
-            <button type="button" class="collapsible">Extracurriculars</button>
-            <div class="content">
-                <span class="subHeader">Changemakers | York College of PA | Fall 2020 – Present</span>
-                <ul>
-                    <li>Participate in the Changemakers community by engaging in a team service project</li>
-                    <li>Attends Spartan Serve days to volunteer at a non-profit, community-oriented organization</li>
-                </ul>
-            </div>
-        </div>
-        <script src="root/Resume.js"></script>
+            <!-- Customization Section -->
+            <section id="Custom" class="hidden unhide-transition-1-5s">
+                <ul id="colors"></ul>
+            </section>
+        </main>
+        
+        <!-- Footer - contains contact information and social media links -->
+        <footer id="page-footer">
+            <a href="mailto:bradenfleming0801@gmail.com" target="_blank" class="page-footer-content"><i class="fa-solid fa-envelope"></i>bradenfleming0801@gmail.com</a>
+            <a href="tel:6673677079" target="_blank" class="page-footer-content"><i class="fa-solid fa-phone"></i>(667)367-7079</a>
+            <a href="https://github.com/UnicycleUnicorn" target="_blank" class="page-footer-content"><i class="fa-brands fa-github"></i>UnicycleUnicorn</a>
+            <a href="https://www.linkedin.com/in/braden-fleming-2b8000234/" target="_blank" class="page-footer-content"><i class="fa-brands fa-linkedin"></i>braden-fleming-2b8000234</a>
+            <a href="https://discordapp.com/users/450402907137769512" target="_blank" class="page-footer-content"><i class="fa-brands fa-discord"></i>bradawg99#1469</a>
+        </footer>
+        
+        <script src="https://kit.fontawesome.com/2fc54de93d.js" crossorigin="anonymous"></script>
+        <script src="root/script.js"></script>
     </body>
 </html>
