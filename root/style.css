@@ -146,11 +146,11 @@ section p.noGap {
 
 /* Home */
 #Home {
-    
     padding: 15px;
 }
 #Home img {
-    height: 280px;
+    width: 30%;
+    min-width: 350px;
 }
 
 
