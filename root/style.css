@@ -150,7 +150,7 @@ section p.noGap {
 }
 #Home img {
     width: 30%;
-    min-width: 50px;
+    min-width: 250px;
 }
 
 
@@ -194,7 +194,7 @@ section p.noGap {
 }
 #Projects div#projectScroll {
     margin: 0px;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
     display: flex;
     align-items: center;
@@ -219,7 +219,7 @@ section p.noGap {
     color: var(--projectSelectoClickColor);
 }
 #Projects div#projectScroll i.projCaret {
-    margin: 3px 10px;
+    margin: 0 10px;
     font-size: 2.2em;
     color: var(--projectCaretColor);
     cursor: pointer;
@@ -230,8 +230,9 @@ section p.noGap {
 #Projects div#projectScroll i.projCaret:active {
     color: var(--projectCaretClickColor);
 }
+
 #Projects div.project {
-    width: 100%;
+    width: auto;
     text-align: center;
 }
 #Projects div.project h2 {
@@ -252,8 +253,9 @@ section p.noGap {
 #Projects .bold {
     font-weight: bold;
 }
-#Projects div.project p.move-left {
-    margin-left: 35px;
+#Projects div.project .resizable-image {
+    width: 30%;
+    min-width: 250px;
 }
 #Projects #honorable-mentions {
     display: flex;
@@ -264,7 +266,7 @@ section p.noGap {
 #Projects #honorable-mentions > div {
     flex: 1;
     margin: 20px;
-    min-width: 400px;
+    min-width: 250px;
 }
 #Projects #honorable-mentions > div > h3 {
     margin-bottom 10px;
@@ -327,7 +329,6 @@ footer#page-footer .page-footer-content:hover {
 
 
 
-
 /* Testing
 p {
     border: 1px solid red;
@@ -343,9 +344,4 @@ span {
 }
 div {
     border: 1px solid purple;
-}
-
- */
-
-
-
+}*/
