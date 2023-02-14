@@ -171,7 +171,7 @@ section p.noGap {
 #Experience > div {
     flex: 1;
     margin: 20px;
-    min-width: 350px;
+    min-width: 250px;
 }
 #Experience > div p {
     text-align: left;
@@ -235,7 +235,7 @@ section p.noGap {
     text-align: center;
 }
 #Projects div.project h2 {
-    margin: 30px 10px;
+    margin: 30px 0px;
 }
 /*
 #Projects div.project p:before {
@@ -323,3 +323,29 @@ footer#page-footer .page-footer-content i::after {
 footer#page-footer .page-footer-content:hover {
     color: var(--footerTextHoverColor);
 }
+
+
+
+
+
+/* Testing
+p {
+    border: 1px solid red;
+}
+h1,h2,h3,h4,h5,h6 {
+    border: 1px solid green;
+}
+img {
+    border: 1px solid blue;
+}
+span {
+    border: 1px solid orange;
+}
+div {
+    border: 1px solid purple;
+}
+
+ */
+
+
+
