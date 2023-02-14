@@ -172,8 +172,6 @@ section p.noGap {
     flex: 1;
     margin: 20px;
     min-width: 350px;
-    
-    border: 1px solid green;
 }
 #Experience > div p {
     text-align: left;
