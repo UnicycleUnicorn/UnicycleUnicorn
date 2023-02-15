@@ -1,5 +1,5 @@
-const sections = document.getElementsByTagName('section');
-const projects = document.getElementById('Projects').getElementsByClassName("project")
+const sections = document.getElementsByClassName('main-section');
+const projects = document.getElementsByClassName("project")
 const style = document.documentElement.style;
 const projectRadios = document.getElementsByClassName("projSelector");
 

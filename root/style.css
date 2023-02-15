@@ -32,6 +32,16 @@
     --mainSideGap: 10px;
     --mainBottomGap: 15px;
     
+    /* Project Navigation */
+    --projectCaretColor: #33475D;
+    --projectCaretClickColor: #7D86B0;
+    --projectCaretHoverColor: #496585;
+    
+    --projectSelectorColor: #415A77;
+    --projectSelectorHoverColor: #6C76A5;
+    --projectSelectoClickColor: #aaafcb;
+    --projectSelectorSelectedColor: #8E95BA;
+    
     /* Footer */
     --footerFont: "Courier New";
     --footerColor: #000000;
@@ -42,6 +52,69 @@
     --footerHorPadding: 30px;
     --footerVertMargin: 10px;
 }
+
+
+/* Defaults */
+p {
+    text-indent: 20pt;
+    margin: 15px 0px;
+    text-align: left;
+}
+h2 {
+    margin: 30px 0px;
+}
+h1 {
+    margin: 0;
+    text-align: left;
+    text-decoration: underline;
+    display: inline-block;
+}
+/*
+#Projects div.project p:before {
+    content: "";
+    width: 12em;
+    display: block;
+    overflow: hidden;
+    border: 1px solid green;
+}*/
+
+
+/* Page Wide */
+.floatRightImage {
+    float: right;
+    margin: 10px;
+}
+.floatLeftImage {
+    float: left;
+    margin: 10px;
+}
+.resizable-image {
+    width: 30%;
+    min-width: 250px;
+}
+.github-link {
+    color: inherit;
+    transition: color 0.1s;
+}
+.github-link:hover {
+    color: #9100fd;
+    transition: color 0.5s;
+}
+.multi-flex-div { /* Adjusts self left & right, sharing space with divs of the same class. If the screen is resized and these shrink past 250 pixels, they will move to new line */
+    flex: 1;
+    margin: 20px;
+    min-width: 250px;
+}
+.bold {
+    font-weight: bold;
+}
+.flex-boi {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
 
 /* Body / Html */
 body, html {
@@ -58,25 +131,19 @@ body, html {
 body {
     display: flex;
     flex-direction: column;
-    height: 100vh;
 }
 
 
 /* Header */
-header#page-header {
+#page-header {
     background-color: var(--headerBackColor);
     padding: var(--headerVertPadding) var(--headerHorPadding);
     font-family: var(--headerFont);
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: -10px;
-}
-header span {
+    margin: 10px 10px 10px -10px;
     color: var(--nameTextColor);
     font-size: var(--nameFontSize);
 }
-header img {
+#page-header img {
     height: var(--profPicHeight);
 }
 
@@ -109,7 +176,7 @@ input[type='checkbox'].navigation-checkbox:checked + label.navigation-display {
 }
 
 
-/* Main / Primary Sections */
+/* Main Sections */
 main {
     flex: 1;
     margin: var(--mainTopGap) var(--mainSideGap) var(--mainBottomGap) var(--mainSideGap);
@@ -118,89 +185,25 @@ main {
     font-size: 14pt;
     display: flex;
 }
-section {
+.main-section {
     flex: 1;
-}
-section h1 {
-    margin: 0;
-    text-align: left;
-    text-decoration: underline;
-    display: inline-block;
-}
-section p {
-    text-indent: 20pt;
-    margin: 15px 0px;
-}
-section p.noGap {
-    margin-top: -10px;
-}
-
-.floatRightImage {
-    float: right;
-    margin: 10px;
-}
-.floatLeftImage {
-    float: left;
-    margin: 10px;
-}
-
-/* Home */
-#Home {
     padding: 15px;
 }
-#Home img {
-    width: 30%;
-    min-width: 250px;
-}
-
 
 /* Education */
 #Education {
     border: 6px solid green;
-    padding: 15px;
 }
-
-
-/* Experience */
-#Experience {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-}
-#Experience > div {
-    flex: 1;
-    margin: 20px;
-    min-width: 250px;
-}
-#Experience > div p {
-    text-align: left;
-}
-#Experience > div > h3 {
-    margin-bottom 10px;
-}
-
 
 /* Projects */
-#Projects {
-    --projectCaretColor: #33475D;
-    --projectCaretClickColor: #7D86B0;
-    --projectCaretHoverColor: #496585;
-    
-    --projectSelectorColor: #415A77;
-    --projectSelectorHoverColor: #6C76A5;
-    --projectSelectoClickColor: #aaafcb;
-    --projectSelectorSelectedColor: #8E95BA;
-}
-#Projects div#projectScroll {
-    margin: 0px;
-    padding: 5px;
+#projectScroll {
+    padding: 5px 0px;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-#Projects div#projectScroll input.projSelector {
+.projSelector {
     margin: 3px 10px;
     font-size: 1em;
     appearance: none;
@@ -208,80 +211,31 @@ section p.noGap {
     font-size: 0.9em;
     cursor: pointer;
 }
-#Projects div#projectScroll input.projSelector:hover {
+.projSelector:hover {
     color: var(--projectSelectorHoverColor);
 }
-#Projects div#projectScroll input.projSelector:checked {
+.projSelector:checked {
     color: var(--projectSelectorSelectedColor);
     font-size: 80%;
 }
-#Projects div#projectScroll input.projSelector:active {
+.projSelector:active {
     color: var(--projectSelectoClickColor);
 }
-#Projects div#projectScroll i.projCaret {
+.projCaret {
     margin: 0 10px;
     font-size: 2.2em;
     color: var(--projectCaretColor);
     cursor: pointer;
 }
-#Projects div#projectScroll i.projCaret:hover {
+.projCaret:hover {
     color: var(--projectCaretHoverColor);
 }
-#Projects div#projectScroll i.projCaret:active {
+.projCaret:active {
     color: var(--projectCaretClickColor);
 }
 
-#Projects div.project {
-    width: auto;
+.project {
     text-align: center;
-}
-#Projects div.project h2 {
-    margin: 30px 0px;
-}
-/*
-#Projects div.project p:before {
-    content: "";
-    width: 12em;
-    display: block;
-    overflow: hidden;
-    border: 1px solid green;
-}*/
-#Projects div.project p {
-    text-align: left;
-    text-indent: 20pt;
-}
-#Projects .bold {
-    font-weight: bold;
-}
-#Projects div.project .resizable-image {
-    width: 30%;
-    min-width: 250px;
-}
-#Projects #honorable-mentions {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-}
-#Projects #honorable-mentions > div {
-    flex: 1;
-    margin: 20px;
-    min-width: 250px;
-}
-#Projects #honorable-mentions > div > h3 {
-    margin-bottom 10px;
-}
-
-
-
-/* GitHub Links */
- a.github-link {
-    color: white;
-    transition: color 0.1s;
-}
- a.github-link:hover {
-    color: #9100fd;
-    transition: color 0.5s;
 }
 
 
@@ -309,19 +263,18 @@ ul#colors li input {
 
 
 /* Footer */
-footer#page-footer {
+#page-footer {
     font-family: var(--footerFont);
     background-color: var(--footerColor);
-    
 }
-footer#page-footer .page-footer-content {
+.page-footer-content {
     font-size: var(--footerFontSize);
     color: var(--footerTextColor);
     margin: var(--footerVertMargin) var(--footerHorPadding);
 }
-footer#page-footer .page-footer-content i::after {
+.page-footer-content i::after {
     content: "\2002";
 }
-footer#page-footer .page-footer-content:hover {
+.page-footer-content:hover {
     color: var(--footerTextHoverColor);
 }
