@@ -1,14 +1,14 @@
 /* Master Controls */
 :root {
     /* Background */
-    --backgroundBottomRight: #101010;
-    --backgroundTopLeft: #1b1313;
-    --backgroundColor: #151010;
+    --backgroundBottomRight: #0c0612;
+    --backgroundTopLeft: #0c0612;
+    --backgroundColor: #0c0612;
     --backgroundImage: linear-gradient(to bottom right, var(--backgroundTopLeft), var(--backgroundBottomRight));
     
     /* Header */
     --headerFont: "Impact";
-    --headerBackColor: #000000;
+    --headerBackColor: #1f0124;
     --profPicHeight: 60px;
     --nameFontSize: 33pt;
     --nameTextColor: #ffffff;
@@ -18,12 +18,12 @@
     /* Navigation */
     --hamburgerFontSize: 30pt;
     --hamburgerTextColor: #ffffff;
-    --hamburgerHoverTextColor: #808080;
+    --hamburgerHoverTextColor: #708090;
     --optionFontSize: 14pt;
     --optionTextColor: #ffffff;
-    --optionHoverTextColor: #000000;
-    --optionBackColor: #000000;
-    --optionHoverBackColor: #808080;
+    --optionHoverTextColor: #ffffff;
+    --optionBackColor: #483D8B;
+    --optionHoverBackColor: #6a5acd;
     --optionRadius: 10px;
     
     /* Main */
@@ -33,21 +33,21 @@
     --mainBottomGap: 15px;
     
     /* Project Navigation */
-    --projectCaretColor: #33475D;
-    --projectCaretClickColor: #7D86B0;
-    --projectCaretHoverColor: #496585;
+    --projectCaretColor: #483D8B;
+    --projectCaretClickColor: #41377d;
+    --projectCaretHoverColor: #6a5acd;
     
-    --projectSelectorColor: #415A77;
-    --projectSelectorHoverColor: #6C76A5;
-    --projectSelectoClickColor: #aaafcb;
-    --projectSelectorSelectedColor: #8E95BA;
+    --projectSelectorColor: #483D8B;
+    --projectSelectorHoverColor: #6a5acd;
+    --projectSelectorClickColor: #41377d;
+    --projectSelectorSelectedColor: #978cdc;
     
     /* Footer */
     --footerFont: "Courier New";
-    --footerColor: #000000;
+    --footerColor: #16011a;
     --footerFontSize: 12pt;
-    --footerTextColor: #ffffff;
-    --footerTextHoverColor: #0000ff;
+    --footerTextColor: #978cdc;
+    --footerTextHoverColor: #cec9ee;
     --footerVertPadding: 45px;
     --footerHorPadding: 30px;
     --footerVertMargin: 10px;
@@ -60,23 +60,24 @@ p {
     margin: 15px 0px;
     text-align: left;
 }
-h2 {
-    margin: 30px 0px;
+/*
+p:before {
+    content: "";
+    width: 12em;
+    display: block;
+    overflow: hidden;
+    border: 1px solid green;
 }
+*/
 h1 {
     margin: 0;
     text-align: left;
     text-decoration: underline;
     display: inline-block;
 }
-/*
-#Projects div.project p:before {
-    content: "";
-    width: 12em;
-    display: block;
-    overflow: hidden;
-    border: 1px solid green;
-}*/
+h2 {
+    margin: 30px 0px;
+}
 
 
 /* Page Wide */
@@ -219,7 +220,7 @@ main {
     font-size: 80%;
 }
 .projSelector:active {
-    color: var(--projectSelectoClickColor);
+    color: var(--projectSelectorClickColor);
 }
 .projCaret {
     margin: 0 10px;
@@ -247,14 +248,14 @@ main {
     padding: 15px;
     text-align: center;
 }
-ul#colors {
+#colors {
     margin: 0px;
     list-style: none;
     padding: 0px;
     text-align: left;
     display: inline-block;
 }
-ul#colors li input {
+#colors li input {
     background: none;
     border: none;
     height: 40px;
@@ -266,15 +267,16 @@ ul#colors li input {
 #page-footer {
     font-family: var(--footerFont);
     background-color: var(--footerColor);
+    
+}
+.page-footer-content:hover {
+    color: var(--footerTextHoverColor);
+}
+.page-footer-content i::after {
+    content: "\2002";
 }
 .page-footer-content {
     font-size: var(--footerFontSize);
     color: var(--footerTextColor);
     margin: var(--footerVertMargin) var(--footerHorPadding);
-}
-.page-footer-content i::after {
-    content: "\2002";
-}
-.page-footer-content:hover {
-    color: var(--footerTextHoverColor);
 }
