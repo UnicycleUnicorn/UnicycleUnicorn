@@ -95,4 +95,11 @@ window.onload = function() {
         newColorLi.appendChild(newColorLabel);
         colors.appendChild(newColorLi);        
     }
+    
+    
+    let paragraphs = document.getElementsByTagName('p');
+
+    for (let i = 0 ; i < paragraphs.length ; i ++) {
+        paragraphs[i].insertAdjacentHTML('beforebegin','<pre class="paragraph-mover"></pre>');
+    }
 };
