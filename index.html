@@ -47,9 +47,8 @@
                 <img src="root/images/YCP.png" height="180" class="floatRightImage" alt="YCP Logo" title="YCP Logo">
                 <p>Currently, I am working towards obtaining my computer science bachelor’s degree at York College of Pennsylvania while working part time.</p>
                 <p>During my schooling, I have had the pleasure of working on many projects to further advance my learning. Some of these projects include an online game repository with matchmaking, an algorithm to convert images to Minecraft blocks, a large Minecraft mod, and a multi-year radio telescope. That's just what I have done so far!</p>
-                <p>In the following semester, I plan to lead the control room development on the radio telescope and contribute towards at least one more large-scale project.</p>
                 <p>Notable classes I have taken so far include: Calculus III, Software Engineering, Networking, Cyber Security, Data Structures, and Algorithms.</p>
-                <p> I am pursuing employment in software development that will allow me to further my computer science education, working toward a graduate degree.</p>
+                <p>I am pursuing employment in software development that will allow me to further my computer science education, working towards a graduate degree at Georgia Tech with a specialization in Computing Systems.</p>
             </div>
             
             <!-- Experience Section -->
@@ -57,7 +56,7 @@
                 <div class="multi-flex-div">
                     <h3>Student Security Supervisor</h3>
                     <p>While attending school at York College of Pennsylvania, I am also working part time at the college's police department as a student security supervisor. I frequently work long shifts responding to routine calls such as lockouts, noise complaints, and fire alarms. I also often respond to medical emergencies, severe and non-severe.</p>
-                    <p>My official title is, Student Sergeant; within this role, I am in charge of the training regime for new recruits as well as training current officers. Trainings range from MOAB to bike, CPR, and tourniquet. Throughout my time in the Campus Safety department, I have gained invaluable skills relating to time management, training, organization, community relations, and the ability to work under stress.</p>
+                    <p>My official title is, Student Sergeant; within this role, I am in charge of the training regime for new recruits as well as training current officers. Trainings range from MOAB to bike, CPR, and tourniquet. Throughout my time in the Campus Safety department, I have gained invaluable skills relating to time management, training, organization, community relations, and the ability to work well under stress.</p>
                 </div>
                 <div class="multi-flex-div">
                     <h3>Programming Instructor</h3>
@@ -67,6 +66,14 @@
                     <h3>Computer Science Intern</h3>
                     <p>During my high-school senior year, I interned at the Johns Hopkins University Physics Lab. While interning there, I developed a ballistics simulation in MATLAB. This simulation, while only accurate for spherical ballistics, considered many factors, including the Earth's rotation, air density changes, and the Magnus effect.</p>
                     <p>Over the course of this internship, I learned a great deal about programming, MATLAB, physics, and math, but I also learned a lot about basic software development. At the end of this internship, the simulation was presented to a team of high-level industry professionals.</p>
+                </div>
+                <div class="multi-flex-div">
+                    <h3>Software Engineer Intern</h3>
+                    <p>During the Summer of 2023, I interned at Mettler Toledo AUTOCHEM as a software engineer. During this period, I designed and implemented bug fixes on an large, industry-leading software project. I utilized modern software-development practices to develop and maintain features within scrum teams, developing in C#, HTML, CSS, and JS in Visual Studio.</p>
+                </div>
+                <div class="multi-flex-div">
+                    <h3>Software Developer Intern</h3>
+                    <p>Currently, during the Fall of 2023, I am interning at KioWare, providing custom developed solutions for many companies, allowing them to interact with their customers via more friendly methods using kiosk pages developed in HTML, CSS, and JS. I am also working directly on the client code that runs the KioWare software under to hood (C#), allowing me to greatly advance my knowledge in device communication, APIs, and logical programming.</p>
                 </div>
             </div>
             
@@ -84,15 +91,23 @@
                     <i class="projCaret fa-solid fa-caret-right" onclick="projectDown()"></i>
                 </div>
                 
-                <!-- Radio Telescope -->
+                <!-- RevMetrix -->
                 <div class="project unhide-transition-1-0s">
+                    <h2>RevMetrix <a href="https://github.com/YCP-Rev-Metrix" target="_blank"  title="View on GitHub" class="github-link"><i class="fa-brands fa-github"></i></a></h2>
+                        <p>As of the start of the Fall 2023 semester, I have been provided the opporunity to work on a new project, RevMetrix. RevMetrix is composed of several components, defining an application that provides it's users with bowling statistics. This is done through a .NET MAUI mobile application that communicates with an ASP.NET web api (and SQL Server), multiple Unity simulators, a custom-built hardware device that is placed in the bowling ball (tracks 3 axis acceleration & light), and a camera that tracks the ball.</p>
+                        <p>As this project is still in its infancy, we have had the ability to determine the technology stack from the ground up using some of the latest technology and layout the initial project architecture. Currently, most of my time is spent leading the team's development efforts, laying out initial strucuture, and working on the Web API, however, I will soon be working on video recognition.</p>
+                        <p>As a team, we provide weekly 2 hour updates with live demos and technical explanations. We have also provided a few larger presentations regarding proposal, requirements, and analysis & design.</p>
+                    <iframe src="https://ycp-rev-metrix.github.io/Wiki/" width="100%" height="600px"></iframe>
+                </div>
+
+                <!-- Radio Telescope -->
+                <div class="project hidden unhide-transition-1-0s">
                     <h2>Radio Telescope <a href="https://github.com/YCPRadioTelescope" target="_blank"  title="View on GitHub" class="github-link"><i class="fa-brands fa-github"></i></a></h2>
                     <p>I have recently been provided the opportunity to work on an extremely interesting and demanding project. The radio telescope is a client driven project at YCP which devoted undergraduates from multiple majors have been developing for the past few years.</p>
                     <img src="root/images/telescope_front.jpg" class="floatLeftImage resizable-image" alt="Font of the Radio Telescope" title="Font of the Radio Telescope">
                     <p>The section that I spend the majority of my time working on is the control room application. Written in primarily C#, the control room handles all connection with the telescope, providing the ability to rotate, schedule appointments, and run scripts from a GUI. Any movement performed by the telescope must go through the control room first, whether or not the mobile application sent the original command.</p>
                     <img src="root/images/telescope_back.jpg" class="floatRightImage resizable-image" alt="Back of the Radio Telescope" title="Back of the Radio Telescope">
                     <p>This project has helped me better my understanding of C# and software development. I have had the privilege of working with an intensive, constantly changing, multi-developer code base, interacting with previous developers, communicating between teams, and presenting to clients. Throughout my time so far, I have also learned a lot about the behind the scenes of networking with the device and the hardware associated with the telescope.</p>
-                    <p>I am currently preparing to lead the development of the control room application during the fall 2023 semester, when we will be onboarding a new group of eager students.</p>
                 </div>
                 
                 <!-- Minecraft Mod -->
@@ -139,11 +154,6 @@
                             <h3>Personal Website <a href="https://github.com/UnicycleUnicorn/UnicycleUnicorn" target="_blank"  title="View on GitHub" class="github-link"><i class="fa-brands fa-github"></i></a></h3>
                             <p>This personal website is something I have been considering developing for a while. It had originally begun as a simple resume with JavaScript for drop downs. Now, it has become much more than that.</p>
                             <p>Over the course of development, I have learned a great deal of HTML, CSS, and JavaScript. Everything is built without the use of third-party frameworks (other than font-awesome for icons). This webpage is developed through the use of my own framework, Frontend Unicycle, developed in pure CSS and JavaScript</p>
-                        </div>
-                        <div class="multi-flex-div">
-                            <h3>Frontend Unicycle <a href="https://github.com/UnicycleUnicorn/frontend-unicycle#readme" target="_blank"  title="View on GitHub" class="github-link"><i class="fa-brands fa-github"></i></a></h3>
-                            <p>Frontend Unicycle is a CSS and JavaScript framework that I am currently developing out of the dislike of common frameworks like bootstrap. I began development right after I began work on this webpage and found that bootstrap wasn't the right fit. I felt the need to learn pure CSS, so Frontend Unicycle was born.</p>
-                            <p>At the time of writing this, Frontend Unicycle has features such as headers, footers, hidden elements, and navigation control. The primary goal is to build as much as possible with only CSS for a responsive, mobile-friendly framework. Currently, the project sits in a state where it will be developed as ideas and needs manifest from either colleagues or myself.</p>
                         </div>
                     </div>
                 </div>
